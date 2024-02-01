@@ -1,10 +1,10 @@
-#include "GuiEditPropietarios.h"
+#include "../../include/GuiEditPropietarios.h"
 #include <wx/textctrl.h>
-#include "string_conv.h"
-#include "Propietario.h"
+#include "../../include/string_conv.h"
+#include "../../include/Propietario.h"
 #include <cstdlib>
 #include <string>
-#include "ioPropietario.h"
+#include "../../include/ioPropietario.h"
 #include <wx/msgdlg.h>
 using namespace std;
 

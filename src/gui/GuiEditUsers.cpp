@@ -1,9 +1,9 @@
-#include "GuiEditUsers.h"
-#include "Usuario.h"
+#include "../../include/GuiEditUsers.h"
+#include "../../include/Usuario.h"
 #include <wx/msgdlg.h>
-#include "string_conv.h"
+#include "../../include/string_conv.h"
 #include <string>
-#include "ioUsuario.h"
+#include "../../include/ioUsuario.h"
 using namespace std;
 
 GuiEditUsers::GuiEditUsers(wxWindow *parent) : EditUsers(parent) {

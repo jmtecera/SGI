@@ -1,4 +1,4 @@
-#include "Usuario.h"
+#include "../include/Usuario.h"
 #include <string>
 using namespace std;
 
@@ -60,8 +60,8 @@ string Usuario::validarDatos() {
 	if (this->usuario == "") error.append("- Ingrese un usuario valido\n");
 	if (this->usuario.size() > 16) error.append("- El nombre es demasiado largo\n");
 	
-	if (this->password == "") error.append("- Ingrese una contraseña valida\n");
-	if (this->password.size() > 16) error.append("- La contraseña es demasiado larga\n");
+	if (this->password == "") error.append("- Ingrese una contraseï¿½a valida\n");
+	if (this->password.size() > 16) error.append("- La contraseï¿½a es demasiado larga\n");
 	
 	return error;
 }

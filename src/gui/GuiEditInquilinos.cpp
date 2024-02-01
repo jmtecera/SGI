@@ -1,9 +1,9 @@
-#include "GuiEditInquilinos.h"
-#include "Inquilino.h"
-#include "string_conv.h"
+#include "../../include/GuiEditInquilinos.h"
+#include "../../include/Inquilino.h"
+#include "../../include/string_conv.h"
 #include <string>
 #include <wx/msgdlg.h>
-#include "ioInquilino.h"
+#include "../../include/ioInquilino.h"
 using namespace std;
 
 GuiEditInquilinos::GuiEditInquilinos(wxWindow *parent) : EditInquilinos(parent) {

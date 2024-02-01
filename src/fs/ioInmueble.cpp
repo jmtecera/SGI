@@ -1,5 +1,5 @@
-#include "ioInmueble.h"
-#include "Inmueble.h"
+#include "../../include/ioInmueble.h"
+#include "../../include/Inmueble.h"
 #include <string>
 #include <cstring>
 #include <cstdio>

@@ -1,22 +1,20 @@
-#include "GuiLogin.h"
-#include "wxfb_project.h"
-#include "ioUsuario.h"
-#include "Usuario.h"
-#include "string_conv.h"
+#include "../../include/GuiLogin.h"
+#include "../../include/ioUsuario.h"
+#include "../../include/string_conv.h"
 #include <wx/panel.h>
 #include <vector>
 #include <string>	
 #include <wx/msgdlg.h>
-#include "GuiMenuUsers.h"
-#include "GuiMenuPropietarios.h"
+#include "../../include/GuiMenuUsers.h"
+#include "../../include/GuiMenuPropietarios.h"
 #include <wx/icon.h>
-#include "GuiMenuInmuebles.h"
-#include "GuiMenuInquilinos.h"
+#include "../../include/GuiMenuInmuebles.h"
+#include "../../include/GuiMenuInquilinos.h"
 using namespace std;
 
 GuiLogin::GuiLogin(wxWindow *parent) : MenuLogin(parent) {
 	wxIcon icono;
-	icono.LoadFile("./icon.ico", wxBITMAP_TYPE_ICO);
+	icono.LoadFile("../../assets/icon.ico", wxBITMAP_TYPE_ICO);
 	SetIcon(icono);
 }
 
@@ -53,7 +51,7 @@ void GuiLogin::OnClickLoginLogin( wxCommandEvent& event )  {
 		camLoginUser->Clear();
 		camLoginPass->Clear();
 		
-		// Cambiamos el wxPanel ocultando uno y mostrando
+		// Cambiamos el wxPanel ocultando uno y mostrando el otro
 		Login->Hide();
 		MenuPrincipal->Show();
 		
@@ -68,11 +66,11 @@ void GuiLogin::OnClickLoginLogin( wxCommandEvent& event )  {
 		break;
 		
 	case Empty:
-		wxMessageBox("¡Los campos no pueden estar vacios!", "SGI - Error", wxOK | wxICON_ERROR);
+		wxMessageBox("ï¿½Los campos no pueden estar vacios!", "SGI - Error", wxOK | wxICON_ERROR);
 		break;
 		
 	case Bad:
-		wxMessageBox("¡Usuario o contraseña incorrectos!", "SGI - Error", wxOK | wxICON_ERROR);
+		wxMessageBox("ï¿½Usuario o contraseï¿½a incorrectos!", "SGI - Error", wxOK | wxICON_ERROR);
 		break;
 	}
 }
@@ -104,7 +102,7 @@ void GuiLogin::OnClickMenuAdmin( wxCommandEvent& event )  {
 }
 
 void GuiLogin::OnClickMenuLogout( wxCommandEvent& event )  {
-	int button = wxMessageBox("¿Está seguro que desea cerrar sesión?", "SGI - Advertencia", wxYES_NO| wxICON_QUESTION);
+	int button = wxMessageBox("ï¿½Estï¿½ seguro que desea cerrar sesiï¿½n?", "SGI - Advertencia", wxYES_NO| wxICON_QUESTION);
 	if (button == wxYES){
 		MenuPrincipal->Hide();
 		Login->Show();
@@ -113,11 +111,11 @@ void GuiLogin::OnClickMenuLogout( wxCommandEvent& event )  {
 }
 
 void GuiLogin::OnTextLoginUserMax( wxCommandEvent& event )  {
-	wxMessageBox("¡El máximo de caracteres para el usuario es de 16!", "SGI - Error", wxOK| wxICON_ERROR);
+	wxMessageBox("ï¿½El mï¿½ximo de caracteres para el usuario es de 16!", "SGI - Error", wxOK| wxICON_ERROR);
 }
 
 void GuiLogin::OnTextLoginPassMax( wxCommandEvent& event )  {
-	wxMessageBox("¡El máximo de caracteres para la contraseña es de 16!", "SGI - Error", wxOK| wxICON_ERROR);
+	wxMessageBox("ï¿½El mï¿½ximo de caracteres para la contraseï¿½a es de 16!", "SGI - Error", wxOK| wxICON_ERROR);
 }
 
 void GuiLogin::OnClickAdminUsers( wxCommandEvent& event )  {

@@ -1,18 +1,18 @@
-#include "GuiMenuInmuebles.h"
-#include "GuiAgregarInmuebles.h"
+#include "../../include/GuiMenuInmuebles.h"
+#include "../../include/GuiAgregarInmuebles.h"
 #include <wx/msgdlg.h>
 #include <vector>
-#include "Inmueble.h"
-#include "ioInmueble.h"
-#include "string_conv.h"
-#include "Inquilino.h"
-#include "Propietario.h"
-#include "ioPropietario.h"
-#include "ioInquilino.h"
+#include "../../include/Inmueble.h"
+#include "../../include/ioInmueble.h"
+#include "../../include/string_conv.h"
+#include "../../include/Inquilino.h"
+#include "../../include/Propietario.h"
+#include "../../include/ioPropietario.h"
+#include "../../include/ioInquilino.h"
 #include <string>
 #include <sstream>
 #include <iomanip>
-#include "GuiEditInmuebles.h"
+#include "../../include/GuiEditInmuebles.h"
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -71,7 +71,7 @@ void GuiMenuInmuebles::OnClickInmBuscar( wxCommandEvent& event )  {
 			}
 		}	
 	} else {
-		wxMessageBox("¡Debe escribir algo para buscar!", "SGI - Error", wxOK | wxICON_ERROR);
+		wxMessageBox("ï¿½Debe escribir algo para buscar!", "SGI - Error", wxOK | wxICON_ERROR);
 	}
 }
 
@@ -108,7 +108,7 @@ void GuiMenuInmuebles::OnClickInmElim( wxCommandEvent& event )  {
 		vector <Inmueble> inmuebles = IoInmueble::leerDatosInm();
 		Inmueble inm = inmuebles[GrillaInmuebles->GetGridCursorRow()];
 		
-		int button = wxMessageBox("¿Está seguro que desea eliminar la fila seleccionada?", "SGI - Advertencia", wxYES_NO| wxICON_QUESTION);
+		int button = wxMessageBox("ï¿½Estï¿½ seguro que desea eliminar la fila seleccionada?", "SGI - Advertencia", wxYES_NO| wxICON_QUESTION);
 		
 		if (button == wxYES){
 			IoInmueble::borrarInm(inm);

@@ -1,7 +1,6 @@
 #include <wx/image.h>
-#include "Application.h"
-#include "GuiLogin.h"
-#include "wxfb_project.h"
+#include "../include/Application.h"
+#include "../include/GuiLogin.h"
 
 IMPLEMENT_APP(Application)
 

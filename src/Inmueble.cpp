@@ -1,4 +1,4 @@
-#include "Inmueble.h"
+#include "../include/Inmueble.h"
 #include <string>
 using namespace std;
 

@@ -1,5 +1,5 @@
-#include "ioInquilino.h"
-#include "Inquilino.h"
+#include "../../include/ioInquilino.h"
+#include "../../include/Inquilino.h"
 #include <cstring>
 #include <vector>
 #include <fstream>

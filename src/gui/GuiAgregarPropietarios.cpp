@@ -1,9 +1,9 @@
-#include "GuiAgregarPropietarios.h"
-#include "string_conv.h"
+#include "../../include/GuiAgregarPropietarios.h"
+#include "../../include/string_conv.h"
 #include <string>
-#include "Propietario.h"
-#include "ioPropietario.h"
-#include "GuiMenuPropietarios.h"
+#include "../../include/Propietario.h"
+#include "../../include/ioPropietario.h"
+#include "../../include/GuiMenuPropietarios.h"
 #include <wx/msgdlg.h>
 using namespace std;
 

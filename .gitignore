@@ -1,3 +1,6 @@
-# Debug and compiled files are omitted. 
-./Debug
-./debug.w32
+# CMake build files
+cmake-build-release
+cmake-build-debug
+
+# Default user information
+./data/Usuarios.dat
