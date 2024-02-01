@@ -1,16 +1,16 @@
-#include "GuiAgregarInmuebles.h"
-#include "GuiMenuInmuebles.h"
+#include "../../include/GuiAgregarInmuebles.h"
+#include "../../include/GuiMenuInmuebles.h"
 #include <wx/textctrl.h>
-#include "string_conv.h"
+#include "../../include/string_conv.h"
 #include <string>
 #include <vector>
-#include "ioPropietario.h"
-#include "Propietario.h"
-#include "Inquilino.h"
-#include "ioInquilino.h"
+#include "../../include/ioPropietario.h"
+#include "../../include/Propietario.h"
+#include "../../include/Inquilino.h"
+#include "../../include/ioInquilino.h"
 #include <wx/combobox.h>
-#include "Inmueble.h"
-#include "ioInmueble.h"
+#include "../../include/Inmueble.h"
+#include "../../include/ioInmueble.h"
 #include <iostream>
 #include <wx/msgdlg.h>
 using namespace std;

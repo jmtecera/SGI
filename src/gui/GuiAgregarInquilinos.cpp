@@ -1,12 +1,12 @@
-#include "GuiAgregarInquilinos.h"
+#include "../../include/GuiAgregarInquilinos.h"
 #include <wx/stattext.h>
 #include <wx/choice.h>
 #include <wx/msgdlg.h>
 #include <string>
-#include "string_conv.h"
-#include "Inquilino.h"
-#include "GuiMenuInquilinos.h"
-#include "ioInquilino.h"
+#include "../../include/string_conv.h"
+#include "../../include/Inquilino.h"
+#include "../../include/GuiMenuInquilinos.h"
+#include "../../include/ioInquilino.h"
 using namespace std;
 
 GuiAgregarInquilinos::GuiAgregarInquilinos(wxWindow *parent) : AgregarInquilinos(parent) {

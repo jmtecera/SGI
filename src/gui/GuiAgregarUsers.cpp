@@ -1,9 +1,9 @@
-#include "GuiAgregarUsers.h"
+#include "../../include/GuiAgregarUsers.h"
 #include <wx/msgdlg.h>
 #include <string>
-#include "string_conv.h"
-#include "Usuario.h"
-#include "ioUsuario.h"
+#include "../../include/string_conv.h"
+#include "../../include/Usuario.h"
+#include "../../include/ioUsuario.h"
 #include <vector>
 using namespace std;
 

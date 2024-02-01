@@ -1,15 +1,15 @@
-#include "GuiMenuInquilinos.h"
-#include "GuiAgregarInquilinos.h"
-#include "ioInquilino.h"
+#include "../../include/GuiMenuInquilinos.h"
+#include "../../include/GuiAgregarInquilinos.h"
+#include "../../include/ioInquilino.h"
 #include <wx/grid.h>
-#include "string_conv.h"
+#include "../../include/string_conv.h"
 #include <sstream>
 #include <iomanip>
 #include <wx/msgdlg.h>
 #include <vector>
-#include "ioInmueble.h"
-#include "Inquilino.h"
-#include "GuiEditInquilinos.h"
+#include "../../include/ioInmueble.h"
+#include "../../include/Inquilino.h"
+#include "../../include/GuiEditInquilinos.h"
 using namespace std;
 
 GuiMenuInquilinos::GuiMenuInquilinos(wxWindow *parent) : MenuInquilinos(parent) {
@@ -53,7 +53,7 @@ void GuiMenuInquilinos::OnClickInqElim( wxCommandEvent& event )  {
 		vector <Inquilino> inquilinos = IoInquilino::leerDatosInq();
 		Inquilino inq = inquilinos[GrillaInquilinos->GetGridCursorRow()];
 		
-		int button = wxMessageBox("¿Está seguro que desea eliminar la fila seleccionada?", "SGI - Advertencia", wxYES_NO| wxICON_QUESTION);
+		int button = wxMessageBox("ï¿½Estï¿½ seguro que desea eliminar la fila seleccionada?", "SGI - Advertencia", wxYES_NO| wxICON_QUESTION);
 		
 		if (button == wxYES){
 			IoInquilino::borrarInq(inq);
@@ -85,7 +85,7 @@ void GuiMenuInquilinos::OnClickInqLiq( wxCommandEvent& event )  {
 	
 	sLiquidado << fixed << setprecision(2) << liquidado;
 	
-	wxMessageBox(wx_to_std("Liquidado: $ " + sLiquidado.str()), "SGI - INFORMACIÓN - " + inq.getApellido(),  wxOK | wxICON_INFORMATION);
+	wxMessageBox(wx_to_std("Liquidado: $ " + sLiquidado.str()), "SGI - INFORMACIï¿½N - " + inq.getApellido(),  wxOK | wxICON_INFORMATION);
 }
 
 void GuiMenuInquilinos::OnClickInqEdit( wxCommandEvent& event )  {
@@ -123,7 +123,7 @@ void GuiMenuInquilinos::OnClickInqBuscar( wxCommandEvent& event )  {
 			}
 		}
 	} else {
-		wxMessageBox("¡Debe escribir algo para buscar!", "SGI - Error", wxOK | wxICON_ERROR);
+		wxMessageBox("ï¿½Debe escribir algo para buscar!", "SGI - Error", wxOK | wxICON_ERROR);
 	}
 }
 GuiMenuInquilinos::~GuiMenuInquilinos() {

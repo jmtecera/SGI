@@ -1,12 +1,12 @@
-#include "GuiEditInmuebles.h"
-#include "Inmueble.h"
+#include "../../include/GuiEditInmuebles.h"
+#include "../../include/Inmueble.h"
 #include <vector>
-#include "Inquilino.h"
-#include "Propietario.h"
-#include "ioInquilino.h"
-#include "ioPropietario.h"
-#include "string_conv.h"
-#include "ioInmueble.h"
+#include "../../include/Inquilino.h"
+#include "../../include/Propietario.h"
+#include "../../include/ioInquilino.h"
+#include "../../include/ioPropietario.h"
+#include "../../include/string_conv.h"
+#include "../../include/ioInmueble.h"
 #include <wx/msgdlg.h>
 using namespace std;
 

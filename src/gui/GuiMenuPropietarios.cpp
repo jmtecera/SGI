@@ -1,18 +1,18 @@
-#include "GuiMenuPropietarios.h"
+#include "../../include/GuiMenuPropietarios.h"
 #include <vector>
-#include "ioPropietario.h"
-#include "string_conv.h"
-#include "GuiAgregarPropietarios.h"
+#include "../../include/ioPropietario.h"
+#include "../../include/string_conv.h"
+#include "../../include/GuiAgregarPropietarios.h"
 #include <wx/msgdlg.h>
 #include <iostream>
-#include "ioInmueble.h"
-#include "Inmueble.h"
+#include "../../include/ioInmueble.h"
+#include "../../include/Inmueble.h"
 #include <sstream>
 #include <iomanip>
-#include "GuiEditPropietarios.h"
+#include "../../include/GuiEditPropietarios.h"
 #include <cctype>
 #include <wx/grid.h>
-#include "Propietario.h"
+#include "../../include/Propietario.h"
 #include <string>
 using namespace std;
 
@@ -64,7 +64,7 @@ void GuiMenuPropietarios::OnClickPropElim( wxCommandEvent& event )  {
 		vector <Propietario> propietarios = IoPropietario::leerDatosProp();
 		Propietario prop = propietarios[GrillaPropietarios->GetGridCursorRow()];
 		
-		int button = wxMessageBox("¿Está seguro que desea eliminar el propietario seleccionado?", "SGI - Advertencia", wxYES_NO | wxICON_QUESTION);
+		int button = wxMessageBox("ï¿½Estï¿½ seguro que desea eliminar el propietario seleccionado?", "SGI - Advertencia", wxYES_NO | wxICON_QUESTION);
 		
 		if (button == wxYES){
 			IoPropietario::borrarProp(prop);
@@ -96,7 +96,7 @@ void GuiMenuPropietarios::OnClickPropLiq( wxCommandEvent& event )  {
 	
 	sLiquidado << fixed << setprecision(2) << liquidado;
 	
-	wxMessageBox(wx_to_std("Liquidado: $ " + sLiquidado.str()), "SGI - INFORMACIÓN - " + prop.getApellido(),  wxOK | wxICON_INFORMATION);
+	wxMessageBox(wx_to_std("Liquidado: $ " + sLiquidado.str()), "SGI - INFORMACIï¿½N - " + prop.getApellido(),  wxOK | wxICON_INFORMATION);
 	GrillaPropietarios->SetCellValue(prop.getId(), 4, wx_to_std("$ " + sLiquidado.str()));
 }
 
@@ -135,7 +135,7 @@ void GuiMenuPropietarios::OnClickPropBuscar( wxCommandEvent& event )  {
 			}
 		}
 	} else {
-		wxMessageBox("¡Debe escribir algo para buscar!", "SGI - Error", wxOK | wxICON_ERROR);
+		wxMessageBox("ï¿½Debe escribir algo para buscar!", "SGI - Error", wxOK | wxICON_ERROR);
 	}
 }
 

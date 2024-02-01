@@ -1,11 +1,9 @@
-#include "ioUsuario.h"
-#include "Usuario.h"
+#include "../../include/ioUsuario.h"
 #include <cstring>
 #include <vector>
 #include <fstream>
 #include <iostream>
 #include <cstdio>
-#include <sys/types.h>
 #include <sys/stat.h>
 #include <string>
 using namespace std;
@@ -35,12 +33,12 @@ struct SUsuario IoUsuario::objetoAStruct(Usuario u){
 
 bool IoUsuario::archivoExiste(){
 	struct stat buf;
-	return (stat("./data/Usuarios.dat", &buf) == 0);
+	return (stat("../../data/Usuarios.dat", &buf) == 0);
 }
 
 bool IoUsuario::crearArchivo(){
-	remove("./data/Usuarios.dat");
-	ofstream nuevoArchi("./data/Usuarios.dat", ios::binary|ios::out);
+	remove("../../data/Usuarios.dat");
+	ofstream nuevoArchi("../../data/Usuarios.dat", ios::binary|ios::out);
 	if (nuevoArchi.fail()) {
 		return false;
 	}
@@ -56,7 +54,7 @@ bool IoUsuario::guardarDatosUsuar(Usuario u) {
 		}
 	}
 	
-	ofstream archiUsuar("./data/Usuarios.dat", ios::binary|ios::in);
+	ofstream archiUsuar("../../data/Usuarios.dat", ios::binary|ios::in);
 	
 	if (archiUsuar.fail()) {
 		return false;
@@ -90,7 +88,7 @@ vector <Usuario> IoUsuario::leerDatosUsuar() {
 		}
 	}
 	
-	ifstream archiUsuar("./data/Usuarios.dat", ios::binary);
+	ifstream archiUsuar("../../data/Usuarios.dat", ios::binary);
 	
 	if (archiUsuar.fail()) {
 		return usuarios;
@@ -125,7 +123,7 @@ bool IoUsuario::borrarUsuar(Usuario u) {
 		}
 	}
 	
-	ofstream archiUsuar("./data/Usuarios.dat", ios::binary|ios::in);
+	ofstream archiUsuar("../../data/Usuarios.dat", ios::binary|ios::in);
 	
 	if (archiUsuar.fail()) {
 		return false;

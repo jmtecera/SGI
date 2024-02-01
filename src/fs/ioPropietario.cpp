@@ -1,5 +1,5 @@
-#include "ioPropietario.h"
-#include "Propietario.h"
+#include "../../include/ioPropietario.h"
+#include "../../include/Propietario.h"
 #include <cstring>
 #include <vector>
 #include <fstream>

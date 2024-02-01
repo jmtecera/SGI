@@ -1,4 +1,4 @@
-#include "Propietario.h"
+#include "../include/Propietario.h"
 #include <string>
 using namespace std;
 

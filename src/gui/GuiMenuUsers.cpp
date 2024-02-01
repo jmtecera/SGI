@@ -1,12 +1,12 @@
-#include "GuiMenuUsers.h"
+#include "../../include/GuiMenuUsers.h"
 #include <wx/event.h>
 #include <wx/msgdlg.h>
-#include "GuiAgregarUsers.h"
+#include "../../include/GuiAgregarUsers.h"
 #include <vector>
-#include "ioUsuario.h"
-#include "string_conv.h"
+#include "../../include/ioUsuario.h"
+#include "../../include/string_conv.h"
 #include <string>
-#include "GuiEditUsers.h"
+#include "../../include/GuiEditUsers.h"
 using namespace std;
 
 GuiMenuUsers::GuiMenuUsers(wxWindow *parent) : MenuUsers(parent) {
@@ -46,7 +46,7 @@ void GuiMenuUsers::OnClickUserBuscar( wxCommandEvent& event )  {
 			}
 		}
 	} else {
-		wxMessageBox("¡Debe escribir algo para buscar!", "SGI - Error", wxOK | wxICON_ERROR);
+		wxMessageBox("ï¿½Debe escribir algo para buscar!", "SGI - Error", wxOK | wxICON_ERROR);
 	}
 }
 
@@ -79,7 +79,7 @@ void GuiMenuUsers::OnClickUserElim( wxCommandEvent& event )  {
 		vector <Usuario> usuarios = IoUsuario::leerDatosUsuar();
 		Usuario user = usuarios[GrillaUsuarios->GetGridCursorRow()];
 		
-		int button = wxMessageBox("¿Está seguro que desea eliminar el usuario seleccionado?", "SGI - Advertencia", wxYES_NO | wxICON_QUESTION);
+		int button = wxMessageBox("ï¿½Estï¿½ seguro que desea eliminar el usuario seleccionado?", "SGI - Advertencia", wxYES_NO | wxICON_QUESTION);
 		
 		if (button == wxYES){
 			IoUsuario::borrarUsuar(user);
