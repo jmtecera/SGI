@@ -1,9 +1,5 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/jmtecera/SGI">
-    <img src="logo.png" alt="Logo" width="241" height="161">
-  </a>
-
   <h1 align="center">SGI</h3>
 
   <p align="center">
